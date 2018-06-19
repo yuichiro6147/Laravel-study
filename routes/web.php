@@ -1,5 +1,8 @@
 <?php
 
+use App\Task;
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +14,23 @@
 |
 */
 
+/**
+ * 全タスク表示
+ */
 Route::get('/', function () {
-    return view('welcome');
+    return view('tasks');
+});
+
+/**
+ * 新タスク追加
+ */
+Route::post('/task', function (Request $request) {
+    //
+});
+
+/**
+ * 既存タスク削除
+ */
+Route::delete('/task/{id}', function ($id) {
+    //
 });
