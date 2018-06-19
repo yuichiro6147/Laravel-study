@@ -25,7 +25,11 @@ Route::get('/', function () {
  * 新タスク追加
  */
 Route::post('/task', function (Request $request) {
-    //
+    $validator = $request->validate([
+        'name' => 'required|max:255'
+    ]);
+
+    //TODO タスク作成
 });
 
 /**
